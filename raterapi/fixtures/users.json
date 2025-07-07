@@ -1,0 +1,44 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@gamerrater.com",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "password": "pbkdf2_sha256$390000$XqYm8Q8XvZr4J2z9U1wVr6$5pOyYp8Kqb7KJGUl8H9E6H7D8F9E6H7D8F9E6H7D8F="
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "player1",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$390000$XqYm8Q8XvZr4J2z9U1wVr6$5pOyYp8Kqb7KJGUl8H9E6H7D8F9E6H7D8F9E6H7D8F="
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "player2",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$390000$XqYm8Q8XvZr4J2z9U1wVr6$5pOyYp8Kqb7KJGUl8H9E6H7D8F9E6H7D8F9E6H7D8F="
+    }
+  }
+]

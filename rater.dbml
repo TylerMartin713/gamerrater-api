@@ -1,0 +1,81 @@
+// Players/Users table
+table player {
+    id int [pk, increment]
+    username varchar [unique, not null]
+    email varchar [unique, not null]
+    password varchar [not null]
+    first_name varchar
+    last_name varchar
+    bio text
+    created_on datetime [default: `now()`]
+}
+
+// Games table
+table game {
+    id int [pk, increment]
+    title varchar [unique, not null]
+    description text [not null]
+    designer varchar [not null]
+    year_released int [not null]
+    number_of_players int [not null]
+    estimated_time_to_play decimal [not null]
+    age_recommendation int [not null]
+    player_id int [ref: > player.id, not null]
+    created_on datetime [default: `now()`]
+}
+
+// Categories table
+table category {
+    id int [pk, increment]
+    label varchar [unique, not null]
+}
+
+// Game-Category many-to-many relationship
+table game_category {
+    id int [pk, increment]
+    game_id int [ref: > game.id, not null]
+    category_id int [ref: > category.id, not null]
+    
+    indexes {
+        (game_id, category_id) [unique]
+    }
+}
+
+// Game pictures table
+table game_picture {
+    id int [pk, increment]
+    game_id int [ref: > game.id, not null]
+    player_id int [ref: > player.id, not null]
+    image_path varchar [not null]
+    caption text
+    uploaded_on datetime [default: `now()`]
+}
+
+// Game ratings table
+table game_rating {
+    id int [pk, increment]
+    game_id int [ref: > game.id, not null]
+    player_id int [ref: > player.id, not null]
+    rating int [not null, note: 'Rating from 1-10']
+    created_on datetime [default: `now()`]
+    updated_on datetime [default: `now()`]
+    
+    indexes {
+        (game_id, player_id) [unique]
+    }
+}
+
+// Game reviews table
+table game_review {
+    id int [pk, increment]
+    game_id int [ref: > game.id, not null]
+    player_id int [ref: > player.id, not null]
+    review text [not null]
+    created_on datetime [default: `now()`]
+    updated_on datetime [default: `now()`]
+    
+    indexes {
+        (game_id, player_id) [unique]
+    }
+}
+

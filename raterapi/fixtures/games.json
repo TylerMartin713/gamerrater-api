@@ -1,0 +1,152 @@
+[
+  {
+    "model": "raterapi.game",
+    "pk": 1,
+    "fields": {
+      "title": "Settlers of Catan",
+      "description": "A strategic board game where players collect resources and build settlements, roads, and cities on the island of Catan. Trade with other players and be the first to reach 10 victory points!",
+      "designer": "Klaus Teuber",
+      "year_released": 1995,
+      "number_of_players": 4,
+      "estimated_time_to_play": "60.00",
+      "age_recommendation": 10,
+      "player": 1,
+      "created_on": "2024-01-15T10:30:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 2,
+    "fields": {
+      "title": "Ticket to Ride",
+      "description": "A railway-themed board game where players collect cards of various types of train cars and use them to claim railway routes connecting cities across a map.",
+      "designer": "Alan R. Moon",
+      "year_released": 2004,
+      "number_of_players": 4,
+      "estimated_time_to_play": "45.00",
+      "age_recommendation": 8,
+      "player": 2,
+      "created_on": "2024-01-16T14:45:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 3,
+    "fields": {
+      "title": "Wingspan",
+      "description": "A competitive, medium-weight, card-driven, engine-building board game about birds. Players are bird enthusiasts seeking to discover and attract the best birds to their network of wildlife preserves.",
+      "designer": "Elizabeth Hargrave",
+      "year_released": 2019,
+      "number_of_players": 3,
+      "estimated_time_to_play": "75.00",
+      "age_recommendation": 10,
+      "player": 1,
+      "created_on": "2024-01-17T09:15:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 4,
+    "fields": {
+      "title": "Azul",
+      "description": "A tile-placement game where players compete as artisans decorating the walls of the Royal Palace of Evora. Players must carefully choose tiles to complete their patterns while avoiding waste.",
+      "designer": "Michael Kiesling",
+      "year_released": 2017,
+      "number_of_players": 2,
+      "estimated_time_to_play": "30.00",
+      "age_recommendation": 8,
+      "player": 3,
+      "created_on": "2024-01-18T16:20:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 5,
+    "fields": {
+      "title": "Pandemic",
+      "description": "A cooperative board game where players work as a team of disease-fighting specialists whose mission is to treat disease hotspots while researching cures for each of four plagues before they get out of hand.",
+      "designer": "Matt Leacock",
+      "year_released": 2008,
+      "number_of_players": 4,
+      "estimated_time_to_play": "45.00",
+      "age_recommendation": 8,
+      "player": 2,
+      "created_on": "2024-01-19T11:30:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 6,
+    "fields": {
+      "title": "7 Wonders",
+      "description": "A card drafting game where players lead one of the seven great cities of the ancient world. Gather resources, develop commercial routes, and affirm military supremacy to build your civilization.",
+      "designer": "Antoine Bauza",
+      "year_released": 2010,
+      "number_of_players": 6,
+      "estimated_time_to_play": "30.00",
+      "age_recommendation": 10,
+      "player": 1,
+      "created_on": "2024-01-20T13:45:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 7,
+    "fields": {
+      "title": "Splendor",
+      "description": "A fast-paced and addictive game of chip-collecting and card development. Players are merchants of the Renaissance trying to buy gem mines, means of transportation, shops—all in order to acquire the most prestige points.",
+      "designer": "Marc André",
+      "year_released": 2014,
+      "number_of_players": 3,
+      "estimated_time_to_play": "30.00",
+      "age_recommendation": 10,
+      "player": 3,
+      "created_on": "2024-01-21T15:00:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 8,
+    "fields": {
+      "title": "King of Tokyo",
+      "description": "A dice-rolling game where players control mutant monsters competing for dominance. Roll dice to gain energy, attack other monsters, and destroy Tokyo to become the King of Tokyo!",
+      "designer": "Richard Garfield",
+      "year_released": 2011,
+      "number_of_players": 5,
+      "estimated_time_to_play": "30.00",
+      "age_recommendation": 8,
+      "player": 2,
+      "created_on": "2024-01-22T12:15:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 9,
+    "fields": {
+      "title": "Codenames",
+      "description": "A social word game where two teams compete to identify their agents among a grid of codename cards using one-word clues from their spymaster.",
+      "designer": "Vlaada Chvátil",
+      "year_released": 2015,
+      "number_of_players": 6,
+      "estimated_time_to_play": "15.00",
+      "age_recommendation": 10,
+      "player": 1,
+      "created_on": "2024-01-23T17:30:00Z"
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 10,
+    "fields": {
+      "title": "Carcassonne",
+      "description": "A tile-placement game where players draw and place tiles to build the French countryside, featuring cities, roads, monasteries, and fields. Deploy followers as knights, monks, highwaymen, and farmers to score points.",
+      "designer": "Klaus-Jürgen Wrede",
+      "year_released": 2000,
+      "number_of_players": 4,
+      "estimated_time_to_play": "45.00",
+      "age_recommendation": 7,
+      "player": 3,
+      "created_on": "2024-01-24T10:45:00Z"
+    }
+  }
+]
