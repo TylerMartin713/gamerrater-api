@@ -2,11 +2,15 @@ from django.http import HttpResponseServerError
 from rest_framework import serializers, status
 from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 from raterapi.models.games import Game
 from raterapi.models.categories import Category
 
 
 class GameViewSet(ViewSet):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
     """games view set"""
 
     def create(self, request):
@@ -110,7 +114,16 @@ class GameViewSet(ViewSet):
             Response -- JSON serialized array
         """
         try:
-            games = Game.objects.all()
+            # Check if user wants only their games
+            my_games = request.query_params.get("my_games", None)
+
+            if my_games == "true":
+                games = Game.objects.filter(player=request.auth.user).order_by(
+                    "-created_on"
+                )
+            else:
+                games = Game.objects.all().order_by("-created_on")
+
             serializer = GameSerializer(games, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Exception as ex:
@@ -120,10 +133,15 @@ class GameViewSet(ViewSet):
 class GameSerializer(serializers.ModelSerializer):
     """JSON serializer for games"""
 
-    categories = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Category.objects.all()
-    )
+    categories = serializers.SerializerMethodField()
     player = serializers.PrimaryKeyRelatedField(read_only=True)
+
+    def get_categories(self, obj):
+        """Get the full category information"""
+        return [
+            {"id": category.id, "label": category.label}
+            for category in obj.categories.all()
+        ]
 
     class Meta:
         model = Game
